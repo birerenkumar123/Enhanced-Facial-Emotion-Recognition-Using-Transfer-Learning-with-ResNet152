@@ -28,7 +28,8 @@ While classical machine learning approaches struggle to jointly optimize feature
 
 Extensive testing on a custom dataset confirms the effectiveness of our method, with ResNet152 achieving 84% accuracy. Real-world experiments with randomly sampled images further validate its robustness and precision. This work presents a reliable FER pipeline that advances beyond traditional techniques through the power of deep residual learning.
 
-This research was presented at the [2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT)](https://ieeexplore.ieee.org/document/10862606).
+Abstract:
+The prospective applications of facial expression-based emotion recognition have sparked a lot of interest in domains like camera technology, mental health analysis, and human-computer interaction. Using the ResNet152 architecture, we suggest a unique facial emotion recognition (FER) technique that makes use of preprocessing, data augmentation, and transfer learning. While deep learning techniques, particularly when combined with CNNs, are known to be successful for classification problems, conventional methods have difficulty optimizing both feature extraction and classification at the same time. Through extensive testing on a dataset, the research shows that the suggested method is effective, with ResNet152 obtaining an accuracy of 84%. Experiments on randomly selected photos from different sources revealed encouraging outcomes for precise and instantaneous FER. This study presents a strong method for FER that makes use of transfer learning and deep learning, providing notable improvements over traditional methods.
 
 ## 🧠 Introduction
 
@@ -38,6 +39,17 @@ Facial expressions play a crucial role in human communication, conveying emotion
 - Affective Computing
 - Behavioral and Mental Health Analysis
 - Intelligent camera systems
+- Document Sections
+I.
+Introduction
+II.
+Literature Survey
+III.
+Methodology
+IV.
+Model Architecture
+V.
+Results and Discussion
 
 Although deep learning has significantly advanced FER, challenges such as subtle emotion differences, varying lighting, pose variations, and natural expression diversity remain. Traditional feature-engineered models often fail due to limited generalization.
 
