@@ -1,13 +1,12 @@
 # 🎯 Facial Emotion Recognition using ResNet152
 *A Deep Learning Approach with Transfer Learning*
 
-[![IEEE Paper](https://img.shields.io/badge/IEEE-Paper-blue.svg)](https://ieeexplore.ieee.org/document/10862606)
+
 [![Conference](https://img.shields.io/badge/Conference-IC--SIT%202024-brightgreen.svg)](https://ieeexplore.ieee.org/document/10862606)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)]()
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15.0-orange)]()
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 
 <p align="center">
   <img src="images/demo.gif" alt="Facial Emotion Recognition Demo" width="600"/>
@@ -44,7 +43,6 @@ Although deep learning has significantly advanced FER, challenges such as subtle
 
 **ResNet152**, known for its deep architecture and skip connections, offers powerful representational capacity ideal for complex visual tasks. Transfer learning further enhances performance by allowing us to reuse learned features from large-scale datasets.
 
-This work was presented at the [2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT)](https://ieeexplore.ieee.org/document/10862606), highlighting the latest advancements in applying deep learning techniques to real-world problems.
 
 ## 🧪 Methodology
 
