@@ -1,112 +1,157 @@
-# Enhanced-Facial-Emotion-Recognition-Using-Transfer-Learning-with-ResNet152
-📌 Overview
-This repository presents a Facial Emotion Recognition (FER) system built using ResNet152, leveraging transfer learning, extensive preprocessing, and data augmentation to achieve high accuracy in real-time emotion classification. The model identifies six emotions: Happy, Angry, Sad, Neutral, Surprise, and Ahegao.
+# 🎯 Facial Emotion Recognition using ResNet152
+*A Deep Learning Approach with Transfer Learning*
+
+[![IEEE Paper](https://img.shields.io/badge/IEEE-Paper-blue.svg)](https://ieeexplore.ieee.org/document/10862606)
+[![Conference](https://img.shields.io/badge/Conference-IC--SIT%202024-brightgreen.svg)](https://ieeexplore.ieee.org/document/10862606)
+[![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)]()
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15.0-orange)]()
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)]()
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+
+<p align="center">
+  <img src="images/demo.gif" alt="Facial Emotion Recognition Demo" width="600"/>
+</p>
+
+## 📌 Overview
+
+This repository presents a **Facial Emotion Recognition (FER)** system built using **ResNet152**, leveraging transfer learning, extensive preprocessing, and data augmentation to achieve high accuracy in real-time emotion classification. The model identifies six emotions: **Happy, Angry, Sad, Neutral, Surprise,** and **Ahegao**.
 
 Deep learning—especially CNN-based architectures—has transformed FER by automatically learning hierarchical features, outperforming traditional hand-engineered approaches. ResNet152's deep residual architecture allows the model to capture subtle facial variations that are often missed by conventional methods.
 
-🔥 Our final model achieved an accuracy of 84%, demonstrating strong generalization across images sourced from diverse real-world environments.
+> 🔥 **Our final model achieved an accuracy of 84%**, demonstrating strong generalization across images sourced from diverse real-world environments.
 
-🔍 Abstract
+## 🔍 Abstract
+
 Facial expression-based emotion recognition has gained significant traction across domains such as camera systems, mental health assessment, and human–computer interaction. This project introduces a FER framework built using the ResNet152 architecture, enhanced by preprocessing, data augmentation, and transfer learning.
 
 While classical machine learning approaches struggle to jointly optimize feature extraction and classification, modern CNN models excel at learning complex visual patterns. By fine-tuning ResNet152—pre-trained on ImageNet—we efficiently adapt its learned representations to the task of emotion classification.
 
 Extensive testing on a custom dataset confirms the effectiveness of our method, with ResNet152 achieving 84% accuracy. Real-world experiments with randomly sampled images further validate its robustness and precision. This work presents a reliable FER pipeline that advances beyond traditional techniques through the power of deep residual learning.
 
-This research was presented at the 2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT).
+This research was presented at the [2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT)](https://ieeexplore.ieee.org/document/10862606).
 
-🧠 Introduction
+## 🧠 Introduction
+
 Facial expressions play a crucial role in human communication, conveying emotional and psychological states in day-to-day interactions. Recognizing emotions from facial cues has major applications in:
 
-Human–Computer Interaction
-Affective Computing
-Behavioral and Mental Health Analysis
-Intelligent camera systems
+- Human–Computer Interaction
+- Affective Computing
+- Behavioral and Mental Health Analysis
+- Intelligent camera systems
+
 Although deep learning has significantly advanced FER, challenges such as subtle emotion differences, varying lighting, pose variations, and natural expression diversity remain. Traditional feature-engineered models often fail due to limited generalization.
 
-ResNet152, known for its deep architecture and skip connections, offers powerful representational capacity ideal for complex visual tasks. Transfer learning further enhances performance by allowing us to reuse learned features from large-scale datasets.
+**ResNet152**, known for its deep architecture and skip connections, offers powerful representational capacity ideal for complex visual tasks. Transfer learning further enhances performance by allowing us to reuse learned features from large-scale datasets.
 
-This work was presented at the 2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT), highlighting the latest advancements in applying deep learning techniques to real-world problems.
+This work was presented at the [2024 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT)](https://ieeexplore.ieee.org/document/10862606), highlighting the latest advancements in applying deep learning techniques to real-world problems.
 
-🧪 Methodology
-1. Data Collection
+## 🧪 Methodology
+
+### 1. Data Collection
+
 The dataset includes six emotion categories:
 
 Images were collected from:
 
-YouTube videos
-Social media platforms (Facebook, Instagram)
-Public datasets (AffectNet, IMDB)
+- YouTube videos
+- Social media platforms (Facebook, Instagram)
+- Public datasets (AffectNet, IMDB)
+
 All images were cropped to contain only faces.
 
-Note: Due to privacy and licensing restrictions, the raw dataset is not publicly available. However, the preprocessing steps and augmentation techniques are fully documented to enable replication using publicly available datasets.
+> **Note**: Due to privacy and licensing restrictions, the raw dataset is not publicly available. However, the preprocessing steps and augmentation techniques are fully documented to enable replication using publicly available datasets.
 
-2. Data Preprocessing
+### 2. Data Preprocessing
+
 Several preprocessing steps ensured the dataset was model-ready:
 
-Dataset Organization: Images were structured into separate directories for each emotion category.
+ **Dataset Organization**: Images were structured into separate directories for each emotion category.
 
-Normalization: Pixel values were scaled to [0, 1] for stable and faster convergence.
+ **Normalization**: Pixel values were scaled to [0, 1] for stable and faster convergence.
 
-Data Augmentation: Using ImageDataGenerator, we applied:
+ **Data Augmentation**: Using ImageDataGenerator, we applied:
 
-±30° rotation
-Zoom variations (0.2)
-Width/height shifts
-Horizontal flips
-Brightness adjustments
+- ±30° rotation
+- Zoom variations (0.2)
+- Width/height shifts
+- Horizontal flips
+- Brightness adjustments
+
 These transformations increase dataset diversity and reduce overfitting by simulating real-world conditions such as lighting changes, pose variations, and facial symmetry differences.
 
-🏗 Model Architecture
-Why ResNet152?
+## 🏗 Model Architecture
+
+### Why ResNet152?
+
 ResNet152 is one of the deepest models in the ResNet family and excels at extracting fine-grained features due to:
 
-Residual Blocks: Allow gradients to flow efficiently using skip connections
-Bottleneck Layers: Reduce computational cost while improving depth
-Deep Feature Extraction: Captures subtle muscle movements and micro-expressions
-Transfer Learning Support: Pretrained weights on ImageNet enable fast adaptation
-Residual Learning Concept
+- **Residual Blocks**: Allow gradients to flow efficiently using skip connections
+- **Bottleneck Layers**: Reduce computational cost while improving depth
+- **Deep Feature Extraction**: Captures subtle muscle movements and micro-expressions
+- **Transfer Learning Support**: Pretrained weights on ImageNet enable fast adaptation
+
+### Residual Learning Concept
+
 Instead of learning direct mappings, ResNet learns residual functions, solving the vanishing gradient problem and enabling networks with over 150 layers to train effectively.
 
-ResNet152 Architecture
+<p align="center">
+  <img src="images/Model Architecture.png" alt="ResNet152 Architecture" width="600"/>
+</p>
 
-📈 Training Process
-Loss Curve
-Training Loss Curve
+## 📈 Training Process
 
-Accuracy Curve
-Training Accuracy Curve
+### Loss Curve
+<p align="center">
+  <img src="images/Loss Curve.png" alt="Training Loss Curve" width="500"/>
+</p>
 
-🎯 Results
-Overall Performance
-Accuracy Achieved: 84% on the custom dataset
-Model Performance: Outperformed baseline CNN architectures
-Generalization: Successfully recognized emotions in randomly sourced images
-Robustness: Stable predictions across lighting and pose differences
-Classification Report
-Class	Precision	Recall	F1-Score	Support
-Ahegao	0.99	0.94	0.97	240
-Angry	0.81	0.79	0.80	253
-Happy	0.94	0.95	0.95	725
-Neutral	0.77	0.77	0.77	811
-Sad	0.77	0.80	0.79	817
-Surprise	0.91	0.84	0.87	245
-Accuracy			0.84	3091
-Macro Avg	0.87	0.85	0.86	3091
-Wgt Avg	0.84	0.84	0.84	3091
-Confusion Matrix
-Confusion Matrix
+### Accuracy Curve
+<p align="center">
+  <img src="images/Accuracy Curve.png" alt="Training Accuracy Curve" width="500"/>
+</p>
 
-🧾 Conclusion
+## 🎯 Results
+
+### Overall Performance
+- **Accuracy Achieved**: 84% on the custom dataset
+- **Model Performance**: Outperformed baseline CNN architectures
+- **Generalization**: Successfully recognized emotions in randomly sourced images
+- **Robustness**: Stable predictions across lighting and pose differences
+
+### Classification Report
+
+| Class     | Precision | Recall | F1-Score | Support |
+|-----------|-----------|--------|----------|---------|
+| Ahegao    | 0.99      | 0.94   | 0.97     | 240     |
+| Angry     | 0.81      | 0.79   | 0.80     | 253     |
+| Happy     | 0.94      | 0.95   | 0.95     | 725     |
+| Neutral   | 0.77      | 0.77   | 0.77     | 811     |
+| Sad       | 0.77      | 0.80   | 0.79     | 817     |
+| Surprise  | 0.91      | 0.84   | 0.87     | 245     |
+| **Accuracy** |           |        | **0.84**     | **3091**    |
+| Macro Avg | 0.87      | 0.85   | 0.86     | 3091    |
+| Wgt Avg   | 0.84      | 0.84   | 0.84     | 3091    |
+
+### Confusion Matrix
+<p align="center">
+  <img src="images/Confusion Matrix.png" alt="Confusion Matrix" width="600"/>
+</p>
+
+## 🧾 Conclusion
+
 This project delivers a robust FER system that integrates:
 
-Advanced preprocessing
-Data augmentation
-Transfer learning
-Deep residual learning with ResNet152
+- Advanced preprocessing
+- Data augmentation
+- Transfer learning
+- Deep residual learning with ResNet152
+
 The approach significantly improves accuracy and real-world performance compared to traditional CNN-based emotion recognition systems. The model's success highlights the strength of deep learning for understanding human emotions in practical applications.
 
-📁 Directory Structure
+## 📁 Directory Structure
+
+```
 Enhanced-Facial-Emotion-Recognition-Using-Transfer-Learning-with-ResNet152/
 ├── app.py                  # Main Streamlit application
 ├── requirements.txt        # Python dependencies
@@ -124,34 +169,53 @@ Enhanced-Facial-Emotion-Recognition-Using-Transfer-Learning-with-ResNet152/
 │   ├── Confusion Matrix.png
 │   ├── Model Architecture.png
 │   └── demo.gif
-🚀 Getting Started
-Prerequisites
-Python 3.7+
-TensorFlow 2.15.0
-Streamlit 1.28.0
-OpenCV 4.8.1.78
-NumPy 1.24.3
-Pillow 10.0.1
-Installation
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.7+
+- TensorFlow 2.15.0
+- Streamlit 1.28.0
+- OpenCV 4.8.1.78
+- NumPy 1.24.3
+- Pillow 10.0.1
+
+### Installation
+
+```bash
 # Clone the repository
 git clone https://github.com/pSahoo-456/Enhanced-Facial-Emotion-Recognition-Using-Transfer-Learning-with-ResNet152.git
 cd Enhanced-Facial-Emotion-Recognition-Using-Transfer-Learning-with-ResNet152
 
 # Install dependencies
 pip install -r requirements.txt
-Model File
-The trained model file (emotion_model.keras) is intentionally excluded from this repository due to its large size (approximately 690MB). To run the application:
+```
 
-Navigate to the project root directory
-Download the model file from the release section or retrain it using the provided Jupyter notebook
-Place the model file in the Model/ directory
-Alternatively, you can retrain the model by running the Jupyter notebook provided in the Notebook/ directory.
+### Model File
 
-Running the Application
+The trained model file (`emotion_model.keras`) is intentionally excluded from this repository due to its large size (approximately 690MB). To run the application:
+
+1. Navigate to the project root directory
+2. Download the model file from the release section or retrain it using the provided Jupyter notebook
+3. Place the model file in the `Model/` directory
+
+Alternatively, you can retrain the model by running the Jupyter notebook provided in the `Notebook/` directory.
+
+### Running the Application
+
+```bash
 # Run the Streamlit app
 streamlit run app.py
 
-📚 References
+
+```
+
+
+
+## 📚 References
+
 [1] Phutela, Deepika. "The importance of non-verbal communication." IUP Journal of Soft Skills 9.4 (2015): 43.
 
 [2] Ioannou, Spiros V., et al. "Emotion recognition through facial expression analysis based on a neurofuzzy network." Neural Networks 18.4 (2005): 423-435.
@@ -172,11 +236,16 @@ streamlit run app.py
 
 [10] Giannopoulos, Panagiotis, Isidoros Perikos, and Ioannis Hatzilygeroudis. "Deep learning approaches for facial emotion recognition: A case study on FER-2013." Advances in hybridization of intelligent methods: Models, systems and applications (2018): 1-16.
 
-📚 Citation
+## 📚 Citation
+
 If you use this work in your research, please cite our paper:
 
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙏 Acknowledgments
-Special thanks to all the researchers whose work is cited in our references section and my mentor for their valuable guidance and support.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Special thanks to all the researchers whose work is cited in our references section and my mentor for their valuable guidance and support.
